@@ -19,7 +19,7 @@ public class Mailing extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mailing);
 
-        TextView etEmail = (TextView) findViewById(R.id.etEmail);
+        etEmail = (TextView) findViewById(R.id.etEmail);
 
         Bundle bundle = getIntent().getExtras();
         mail = bundle.getString("email");
