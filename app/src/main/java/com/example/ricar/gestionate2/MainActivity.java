@@ -8,15 +8,18 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
 import com.example.ricar.gestionate2.Beans.BeansClientes;
 import com.example.ricar.gestionate2.mysql.Conexion;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener{
 
@@ -40,11 +43,13 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         Li = (ListView) findViewById(R.id.listView1);
         Li.setAdapter(new ArrayAdapter<BeansClientes>(this, android.R.layout.simple_list_item_1, lista));
         Li.setTextFilterEnabled(true);
+
+
         setupSearchView();
 
     //fin del seachview
 
-        Li = (ListView) findViewById(R.id.listView1);
+       // Li = (ListView) findViewById(R.id.listView1);
 
         //fab
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -67,7 +72,11 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
                 lista.add(clientes);
             } while (c.moveToNext());
         }
+        //adaptador para list_item
+        //MyAdapter myAdapter = new MyAdapter(this, R.layout.list_item, lista);
+        //Li.setAdapter(myAdapter);
 
+        //adaptador original que funciona
         final ArrayAdapter<BeansClientes> adap = new ArrayAdapter<BeansClientes>(getApplicationContext(), android.R.layout.simple_list_item_1, lista);
         Li.setAdapter(adap);
 
@@ -117,6 +126,5 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         mSearchView.setQueryHint("Buscar nombre o telefono");
     }
 }
-
 
 

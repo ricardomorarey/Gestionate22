@@ -40,7 +40,7 @@ public class FichaActivity extends AppCompatActivity {
 
     Button _agrepacientes;
     Button _agrefacturas;
-    Button borrar_cliente;
+    //Button borrar_cliente;
     ImageButton _mandaremail;
 
 
@@ -67,7 +67,7 @@ public class FichaActivity extends AppCompatActivity {
         _mandaremail = (ImageButton) findViewById(sendmail);
 
 
-        borrar_cliente=(Button)findViewById(R.id.buttonborrarcliente);
+        /*borrar_cliente=(Button)findViewById(R.id.buttonborrarcliente);
         //borrar cliente
         borrar_cliente.setOnClickListener(new View.OnClickListener() {
 
@@ -84,7 +84,7 @@ public class FichaActivity extends AppCompatActivity {
                 Intent intent = new Intent(FichaActivity.this, MainActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         //muestro datos extraidos del listview que vienen de la busqueda
         Bundle bundle = getIntent().getExtras();

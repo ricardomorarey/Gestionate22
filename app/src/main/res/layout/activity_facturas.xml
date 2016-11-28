@@ -7,8 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.ricar.gestionate2.FacturasActivity"
-    android:background="@color/colorPrimaryDark">
+    tools:context="com.example.ricar.gestionate2.FacturasActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -18,7 +17,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff"/>
+        android:textColor="@color/colorPrimaryDark"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -40,7 +39,7 @@
         android:layout_below="@+id/editText7"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff"/>
+        android:textColor="@color/colorPrimaryDark"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -60,7 +59,9 @@
         android:text="añadir"
         android:id="@+id/buttonañadir"
         android:layout_below="@+id/editText8"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimaryDark"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,7 +71,7 @@
         android:layout_below="@+id/buttonañadir"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:textColor="#ffffff"/>
+        android:textColor="@color/colorPrimaryDark"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -92,7 +93,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/editText12"
         android:layout_alignParentLeft="true"
-        android:textColor="#ffffff"/>
+        android:textColor="@color/colorPrimaryDark"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -112,6 +113,8 @@
         android:text="añadir"
         android:id="@+id/buttonañaimp"
         android:layout_below="@+id/editText13"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimaryDark"/>
 
 </RelativeLayout>
