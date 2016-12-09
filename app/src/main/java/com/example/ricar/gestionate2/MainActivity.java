@@ -24,7 +24,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener{
 
     ListView Li;
-    ArrayList<BeansClientes> lista = new ArrayList<BeansClientes>();
+    ArrayList<BeansClientes> lista = new ArrayList<>();
     BeansClientes clientes;
     private SearchView mSearchView;
 
@@ -39,17 +39,15 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         setContentView(R.layout.activity_main);
 
 
-        mSearchView = (SearchView) findViewById(R.id.search_view);
+        mSearchView = (SearchView) findViewById(R.id.serach_view);
         Li = (ListView) findViewById(R.id.listView1);
-        Li.setAdapter(new ArrayAdapter<BeansClientes>(this, android.R.layout.simple_list_item_1, lista));
+        Li.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, lista));
         Li.setTextFilterEnabled(true);
 
 
         setupSearchView();
 
-    //fin del seachview
-
-       // Li = (ListView) findViewById(R.id.listView1);
+        //fin del seachview
 
         //fab
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -62,23 +60,14 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         });
         //termino el fab
 
-        Conexion cn = new Conexion(getApplicationContext(), "BDClientes.db", null, 1);
-        SQLiteDatabase db = cn.getWritableDatabase();
 
-        Cursor c = db.rawQuery("SELECT * FROM clientes", null);
-        if (c.moveToFirst()) {
-            do {
-                clientes = new BeansClientes(c.getString(0), c.getString(1), c.getString(2), c.getString(3), c.getString(4), c.getString(5));
-                lista.add(clientes);
-            } while (c.moveToNext());
-        }
         //adaptador para list_item
-        //MyAdapter myAdapter = new MyAdapter(this, R.layout.list_item, lista);
+        //MyAdapter myAdapter = new MyAdapter(this, lista);
         //Li.setAdapter(myAdapter);
 
         //adaptador original que funciona
-        final ArrayAdapter<BeansClientes> adap = new ArrayAdapter<BeansClientes>(getApplicationContext(), android.R.layout.simple_list_item_1, lista);
-        Li.setAdapter(adap);
+        final ArrayAdapter<BeansClientes> MyAdapter = new ArrayAdapter<BeansClientes>(getApplicationContext(), R.layout.list_item, lista);
+        Li.setAdapter(MyAdapter);
 
         //pulsacion en el item del Listview y voy a la ficha.
         Li.setOnItemClickListener(new AdapterView.OnItemClickListener() {

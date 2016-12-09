@@ -67,7 +67,7 @@ public class BeansClientes {
 
     @Override
     public String toString (){
-        return this.nombre.concat(" tlf: "+telefono);
+        return this.nombre + this.telefono;
     }
 
 

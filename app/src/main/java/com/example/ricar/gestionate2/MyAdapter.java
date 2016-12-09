@@ -1,5 +1,6 @@
 package com.example.ricar.gestionate2;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,52 +11,53 @@ import android.widget.TextView;
 import com.example.ricar.gestionate2.Beans.BeansClientes;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class MyAdapter extends BaseAdapter {
+    protected Activity activity;
+    //protected ArrayList<ItemCompra> items;
+    protected ArrayList<BeansClientes> lista ;
 
-    private Context context;
-    private int layout;
-    //private List<String> names;
-    ArrayList<BeansClientes> lista = new ArrayList<BeansClientes>();
-
-
-    //public MyAdapter (Context context, int layout, List<String> names){
-    public MyAdapter (Context context, int layout, ArrayList<BeansClientes> lista ){
-        this.context = context;
-        this.layout = layout;
-        //this.names = names;
+    public MyAdapter(Activity activity, ArrayList<BeansClientes> lista) {
+        this.activity = activity;
         this.lista = lista;
     }
 
+
+
     @Override
     public int getCount() {
-        return this.names.size();
+        return lista.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return this.names.get(position);
+        return lista.get(position);
     }
 
     @Override
-    public long getItemId(int id) {
-        return id;
+    public long getItemId(int position) {
+        return Long.parseLong(lista.get(position).get_id_c());
     }
 
     @Override
-    public View getView(int position, View convertView, ViewGroup viewGroup) {
+    public View getView(int position, View contentView, ViewGroup parent) {
+        View vi=contentView;
 
-        View v = convertView;
+        if(contentView == null) {
+            LayoutInflater inflater = (LayoutInflater) activity
+                    .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            vi = inflater.inflate(R.layout.list_item, null);
+        }
 
-        LayoutInflater layoutInflater = LayoutInflater.from(this.context);
-        v = layoutInflater.inflate(R.layout.list_item, null);
+        BeansClientes item = lista.get(position);
 
-        String currentName = names.get(position);
 
-        TextView textView = (TextView)v.findViewById(R.id.textView29);
-        textView.setText(currentName);
+        TextView nombre = (TextView) vi.findViewById(R.id.tvItem1);
+        nombre.setText(item.getNombre());
 
-        return  v;
+        TextView telf = (TextView) vi.findViewById(R.id.tvItem2);
+        telf.setText(item.getTelefono());
+
+        return vi;
     }
 }
