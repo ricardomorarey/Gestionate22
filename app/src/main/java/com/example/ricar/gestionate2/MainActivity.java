@@ -74,14 +74,14 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         //pulsacion en el item del Listview y voy a la ficha.
         Li.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
+            public void onItemClick(AdapterView<?> arg0, View arg1, int position, long id) {
                 //recojo los parametros
-                String _id_c = lista.get(arg2).get_id_c();
-                String telefono = lista.get(arg2).getTelefono();
-                String nombre = lista.get(arg2).getNombre();
-                String email = lista.get(arg2).getEmail();
-                String direccion = lista.get(arg2).getDireccion();
-                String dni = lista.get(arg2).getDni();
+                String _id_c = adap.getItem(position).get_id_c();
+                String telefono = adap.getItem(position).getTelefono();
+                String nombre = adap.getItem(position).getNombre();
+                String email = adap.getItem(position).getEmail();
+                String direccion = adap.getItem(position).getDireccion();
+                String dni = adap.getItem(position).getDni();
                 //CReo el intent y seteo esos datos
                 Intent in = new Intent(getApplicationContext(), FichaActivity.class);
                 in.putExtra("_id_c", _id_c);
