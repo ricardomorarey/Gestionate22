@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -21,28 +22,20 @@ import com.example.ricar.gestionate2.mysql.Conexion;
 import java.util.ArrayList;
 
 import static com.example.ricar.gestionate2.R.id.sendmail;
+import static com.example.ricar.gestionate2.R.id.sendphone;
 
 public class FichaActivity extends AppCompatActivity {
 
-
     TextView tv5, tv6, tv7, tv16, tv17;
-    TextView tvsp, tvsip;
-
     ListView Lip;
-
     ArrayList<BeansPacientes> listap = new ArrayList<BeansPacientes>();
-
-
     String idc, tlf, nom, mail, dir, dn;
-
     Button _agrepacientes;
     Button _agrefacturas;
-    //Button borrar_cliente;
+    Button _histofacturas;
+    ImageButton _sendphone;
     ImageButton _mandaremail;
-
-
     BeansPacientes pacientes;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,10 +48,8 @@ public class FichaActivity extends AppCompatActivity {
         tv16 = (TextView) findViewById(R.id.textView16);
         tv17 = (TextView) findViewById(R.id.textView17);
         Lip = (ListView) findViewById(R.id.listViewp);
-
-
         _mandaremail = (ImageButton) findViewById(sendmail);
-
+        _sendphone = (ImageButton) findViewById(sendphone);
 
         /*borrar_cliente=(Button)findViewById(R.id.buttonborrarcliente);
         //borrar cliente
@@ -110,19 +101,20 @@ public class FichaActivity extends AppCompatActivity {
         //pulsacion en el boton de mandar email
         _mandaremail.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent(FichaActivity.this, Mailing.class);
-                intent.putExtra("email", mail);
-                startActivity(intent);
+
             }
         });
+        //pulsacion en el boton de llamar
+        _sendphone.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
 
-
-
-
+            }
+        });
 
         //Botones pagina
         _agrepacientes = (Button) findViewById(R.id.button);
         _agrefacturas = (Button) findViewById(R.id.button3);
+        _histofacturas = (Button) findViewById(R.id.buttonHFact);
 
         _agrepacientes.setOnClickListener(new View.OnClickListener() {
 
@@ -143,6 +135,22 @@ public class FichaActivity extends AppCompatActivity {
                 Intent intent = new Intent(FichaActivity.this, FacturasActivity.class);
                 intent.putExtra("_id_c", idc);
                 startActivity(intent);
+
+            }
+        });
+        _histofacturas.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View arg0) {
+
+                Intent in = new Intent(FichaActivity.this, Facturacion.class);
+                in.putExtra("_id_c", idc);
+                in.putExtra("telefono", tlf);
+                in.putExtra("nombre", nom);
+                in.putExtra("email", mail);
+                in.putExtra("direccion", dir);
+                in.putExtra("dni", dn);
+                startActivity(in);
 
             }
         });

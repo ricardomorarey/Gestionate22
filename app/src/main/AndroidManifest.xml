@@ -3,6 +3,7 @@
     package="com.example.ricar.gestionate2">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:fullBackupContent="@xml/mybackupscheme"
@@ -10,7 +11,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+        <uses-permission android:name="android.permission.CALL_PHONE" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -24,7 +25,8 @@
         <activity android:name=".FacturasActivity" />
         <activity android:name=".FichaActivity" />
         <activity android:name=".FichaPacientes" />
-        <activity android:name=".Mailing"></activity>
+        <activity android:name=".Mailing" />
+        <activity android:name=".Facturacion"></activity>
     </application>
 
 </manifest>
