@@ -29,24 +29,19 @@ public class FichaActivity extends AppCompatActivity {
     TextView tvsp, tvsip;
 
     ListView Lip;
-    ListView Lifp;
-    ListView Lifip;
 
     ArrayList<BeansPacientes> listap = new ArrayList<BeansPacientes>();
-    ArrayList<BeansFacturasP> listafp = new ArrayList<BeansFacturasP>();
-    ArrayList<BeansFacturasIP> listafip = new ArrayList<BeansFacturasIP>();
+
 
     String idc, tlf, nom, mail, dir, dn;
 
     Button _agrepacientes;
     Button _agrefacturas;
-    Button borrar_cliente;
+    //Button borrar_cliente;
     ImageButton _mandaremail;
 
 
     BeansPacientes pacientes;
-    BeansFacturasP facturasp;
-    BeansFacturasIP facturasip;
 
 
     @Override
@@ -60,14 +55,12 @@ public class FichaActivity extends AppCompatActivity {
         tv16 = (TextView) findViewById(R.id.textView16);
         tv17 = (TextView) findViewById(R.id.textView17);
         Lip = (ListView) findViewById(R.id.listViewp);
-        Lifp = (ListView) findViewById(R.id.listViewfp);
-        Lifip = (ListView) findViewById(R.id.listViewfip);
-        tvsp = (TextView) findViewById(R.id.textViewsp);
-        tvsip = (TextView) findViewById(R.id.textViewsip);
+
+
         _mandaremail = (ImageButton) findViewById(sendmail);
 
 
-        borrar_cliente=(Button)findViewById(R.id.buttonborrarcliente);
+        /*borrar_cliente=(Button)findViewById(R.id.buttonborrarcliente);
         //borrar cliente
         borrar_cliente.setOnClickListener(new View.OnClickListener() {
 
@@ -84,7 +77,7 @@ public class FichaActivity extends AppCompatActivity {
                 Intent intent = new Intent(FichaActivity.this, MainActivity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         //muestro datos extraidos del listview que vienen de la busqueda
         Bundle bundle = getIntent().getExtras();
@@ -123,45 +116,9 @@ public class FichaActivity extends AppCompatActivity {
             }
         });
 
-        //mis datos de mi consulta tabla de facturas
-        Cursor f = db.rawQuery("SELECT * FROM facturasp WHERE _id_c=" + idc, null);
-        if (f.moveToFirst()) {
-            do {
-                facturasp = new BeansFacturasP(f.getString(0), f.getString(1), f.getString(2), f.getString(3));
-                listafp.add(facturasp);
-            } while (f.moveToNext());
-        }
-        ArrayAdapter<BeansFacturasP> adapfp = new ArrayAdapter<BeansFacturasP>(getApplicationContext(), android.R.layout.simple_list_item_1, listafp);
-        Lifp.setAdapter(adapfp);
 
-        Cursor fi = db.rawQuery("SELECT * FROM facturasip WHERE _id_c=" + idc, null);
-        if (fi.moveToFirst()) {
-            do {
-                facturasip = new BeansFacturasIP(fi.getString(0), fi.getString(1), fi.getString(2), fi.getString(3));
-                listafip.add(facturasip);
-            } while (fi.moveToNext());
-        }
-        final ArrayAdapter<BeansFacturasIP> adapfip = new ArrayAdapter<BeansFacturasIP>(getApplicationContext(), android.R.layout.simple_list_item_1, listafip);
-        Lifip.setAdapter(adapfip);
 
-        //Sumatorios facturas
-        Cursor s = db.rawQuery("SELECT Sum(importep)AS suma FROM facturasp WHERE _id_c =" + idc, null);
-        if (s.moveToFirst()) {
-            do {
-                String sum = s.getString(0);
-                tvsp.setText(sum);
 
-            } while (s.moveToNext());
-        }
-
-        Cursor si = db.rawQuery("SELECT Sum(importeip)AS sumai FROM facturasip WHERE _id_c =" + idc, null);
-        if (si.moveToFirst()) {
-            do {
-                String sum = si.getString(0);
-                tvsip.setText(sum);
-
-            } while (si.moveToNext());
-        }
 
         //Botones pagina
         _agrepacientes = (Button) findViewById(R.id.button);

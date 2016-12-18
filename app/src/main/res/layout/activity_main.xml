@@ -4,11 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/colorPrimaryDark"
     tools:context="com.example.ricar.gestionate2.MainActivity">
 
     <android.support.design.widget.FloatingActionButton
@@ -20,25 +15,9 @@
         android:layout_alignRight="@+id/listView1"
         android:layout_alignEnd="@+id/listView1"
         android:adjustViewBounds="false"
-        app:backgroundTint="@android:color/background_dark"
-        app:srcCompat="@android:drawable/ic_menu_add"
-        app:elevation="9dp" />
-
-   <SearchView
-       android:id="@+id/search_view"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Lista de clientes"
-        android:id="@+id/textView"
-        android:textColor="#ffffff"
-        android:layout_below="@+id/search_view"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        app:backgroundTint="?attr/colorPrimaryDark" />
 
     <ListView
         android:layout_width="wrap_content"
@@ -49,7 +28,33 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="31dp"
-        android:layout_alignParentBottom="true" />
+        android:layout_alignParentBottom="true"
+        android:footerDividersEnabled="false"
+        android:headerDividersEnabled="false"
+        android:background="@color/colorAccent" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Lista de clientes"
+        android:id="@+id/textView"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginTop="90dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <SearchView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/search_view" />
+
 
 </RelativeLayout>
 
