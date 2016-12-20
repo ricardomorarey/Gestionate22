@@ -36,18 +36,18 @@ public class Mailing extends AppCompatActivity {
                 EditText etBody = (EditText) findViewById(R.id.etcuerpoemail);
 
                 //es necesario un intent que levante la actividad deseada
-                Intent itSend = new Intent(android.content.Intent.ACTION_SEND);
+                Intent itSendprogramado = new Intent(android.content.Intent.ACTION_SEND);
 
                 //vamos a enviar texto plano a menos que el checkbox esté marcado
-                itSend.setType("plain/text");
+                itSendprogramado.setType("plain/text");
 
                 //colocamos los datos para el envío
-                itSend.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{etEmail.getText().toString()});
-                itSend.putExtra(android.content.Intent.EXTRA_SUBJECT, etSubject.getText().toString());
-                itSend.putExtra(android.content.Intent.EXTRA_TEXT, etBody.getText());
+                itSendprogramado.putExtra(android.content.Intent.EXTRA_EMAIL, new String[]{etEmail.getText().toString()});
+                itSendprogramado.putExtra(android.content.Intent.EXTRA_SUBJECT, etSubject.getText().toString());
+                itSendprogramado.putExtra(android.content.Intent.EXTRA_TEXT, etBody.getText());
 
                 //iniciamos la actividad
-                startActivity(itSend);
+                startActivity(itSendprogramado);
             }
         });
     }

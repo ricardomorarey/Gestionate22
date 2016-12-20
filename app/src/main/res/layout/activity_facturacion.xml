@@ -22,23 +22,21 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:id="@+id/listpagadas"
-            android:background="@android:color/holo_green_light"/>
+            android:background="@color/colorAccent"/>
 
         <TextView
             android:text="TOTAL FACTURAS COBRADAS :"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textViewtotalfcobradas"
-            android:gravity="center_horizontal"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:gravity="center_horizontal" />
 
         <TextView
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textViewsumafp"
-            android:gravity="center_horizontal"
-            android:textColor="@color/colorPrimaryDark"/>
+            android:gravity="center_horizontal" />
 
         <LinearLayout
             android:orientation="vertical"
@@ -56,16 +54,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewtotalfincobradas"
-                android:gravity="center_horizontal"
-                android:textColor="@color/colorPrimaryDark" />
+                android:gravity="center_horizontal" />
 
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/textViewsumafip"
-                android:gravity="center_horizontal"
-                android:textColor="@color/colorPrimaryDark" />
+                android:gravity="center_horizontal" />
         </LinearLayout>
 
 
