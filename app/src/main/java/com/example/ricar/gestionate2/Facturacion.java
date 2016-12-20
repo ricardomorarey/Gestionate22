@@ -67,7 +67,7 @@ public class Facturacion extends AppCompatActivity {
         Lifip.setAdapter(adapfip);
 
         pagadas = (TextView) findViewById(R.id.textViewsumafp);
-        impagadas = (TextView) findViewById(R.id.textViewtotalfincobradas);
+        impagadas = (TextView) findViewById(R.id.textViewsumafip);
 
         //Sumatorios facturas
         Cursor s = db.rawQuery("SELECT Sum(importep)AS suma FROM facturasp WHERE _id_c =" + idc, null);

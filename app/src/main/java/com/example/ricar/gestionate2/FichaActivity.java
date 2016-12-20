@@ -3,6 +3,7 @@ package com.example.ricar.gestionate2;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -101,13 +102,15 @@ public class FichaActivity extends AppCompatActivity {
         //pulsacion en el boton de mandar email
         _mandaremail.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                Intent intentEmaiTo = new Intent(Intent.ACTION_SENDTO, Uri.parse("mailto:"+mail));
+                startActivity(intentEmaiTo);
             }
         });
         //pulsacion en el boton de llamar
         _sendphone.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
+                Intent intentphone = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:"+tlf));
+                startActivity(intentphone);
             }
         });
 
