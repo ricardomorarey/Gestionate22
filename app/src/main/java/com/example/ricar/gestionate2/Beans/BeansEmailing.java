@@ -4,7 +4,7 @@ package com.example.ricar.gestionate2.Beans;
  * Created by ${"Ricardo"} on 22/09/2016.
  */
 
-public class BeansEmailing {
+class BeansEmailing {
 
     private String _id_email;
     private String _id_c;

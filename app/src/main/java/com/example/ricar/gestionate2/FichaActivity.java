@@ -10,13 +10,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.ricar.gestionate2.Beans.BeansFacturasIP;
-import com.example.ricar.gestionate2.Beans.BeansFacturasP;
 import com.example.ricar.gestionate2.Beans.BeansPacientes;
 import com.example.ricar.gestionate2.mysql.Conexion;
 
@@ -27,16 +24,25 @@ import static com.example.ricar.gestionate2.R.id.sendphone;
 
 public class FichaActivity extends AppCompatActivity {
 
-    TextView tv5, tv6, tv7, tv16, tv17;
-    ListView Lip;
-    ArrayList<BeansPacientes> listap = new ArrayList<BeansPacientes>();
-    String idc, tlf, nom, mail, dir, dn;
-    Button _agrepacientes;
-    Button _agrefacturas;
-    Button _histofacturas;
-    ImageButton _sendphone;
-    ImageButton _mandaremail;
-    BeansPacientes pacientes;
+    private TextView tv5;
+    private TextView tv6;
+    private TextView tv7;
+    private TextView tv16;
+    private TextView tv17;
+    private ListView Lip;
+    private final ArrayList<BeansPacientes> listap = new ArrayList<>();
+    private String idc;
+    private String tlf;
+    private String nom;
+    private String mail;
+    private String dir;
+    private String dn;
+    private Button _agrepacientes;
+    private Button _agrefacturas;
+    private Button _histofacturas;
+    private ImageButton _sendphone;
+    private ImageButton _mandaremail;
+    private BeansPacientes pacientes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +92,7 @@ public class FichaActivity extends AppCompatActivity {
         tv16.setText(dir);
         tv17.setText(dn);
         //muestro datos de mi consulta en mi base de datos y mis tablas
-        Conexion cn = new Conexion(getApplicationContext(), "BDClientes.db", null, 1);
+        Conexion cn = new Conexion(getApplicationContext(), "BDClientes.db", null);
         final SQLiteDatabase db = cn.getWritableDatabase();
 
         Cursor c = db.rawQuery("SELECT * FROM pacientes WHERE _id_c=" + idc, null);
@@ -96,7 +102,7 @@ public class FichaActivity extends AppCompatActivity {
                 listap.add(pacientes);
             } while (c.moveToNext());
         }
-        ArrayAdapter<BeansPacientes> adap = new ArrayAdapter<BeansPacientes>(getApplicationContext(), android.R.layout.simple_list_item_1, listap);
+        ArrayAdapter<BeansPacientes> adap = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, listap);
         Lip.setAdapter(adap);
 
         //pulsacion en el boton de mandar email

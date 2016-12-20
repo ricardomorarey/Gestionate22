@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,7 +13,6 @@ import com.example.ricar.gestionate2.mysql.Conexion;
 public class AgregarActivity extends AppCompatActivity {
 
     private EditText et1,et2,et3,et4,et5;
-    private Button boton_guardar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +24,7 @@ public class AgregarActivity extends AppCompatActivity {
         et3 = (EditText)findViewById(R.id.editText3);
         et4 = (EditText)findViewById(R.id.editText9);
         et5 = (EditText)findViewById(R.id.editText10);
-        boton_guardar = (Button)findViewById(R.id.button2);
+        Button boton_guardar = (Button) findViewById(R.id.button2);
 
         boton_guardar.setOnClickListener(new View.OnClickListener() {
 
@@ -39,7 +37,7 @@ public class AgregarActivity extends AppCompatActivity {
                 String direccion = et4.getText().toString();
                 String dni = et5.getText().toString();
 
-                Conexion cn = new Conexion(getApplicationContext(),"BDClientes.db",null,1);
+                Conexion cn = new Conexion(getApplicationContext(),"BDClientes.db",null);
                 SQLiteDatabase db = cn.getWritableDatabase();
                 cn.InsertarUsuario(db, telefono, nombre, email, direccion,dni );
 

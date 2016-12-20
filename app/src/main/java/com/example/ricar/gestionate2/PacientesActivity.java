@@ -13,8 +13,7 @@ import com.example.ricar.gestionate2.mysql.Conexion;
 public class PacientesActivity extends AppCompatActivity {
 
     private EditText edit1, edit2, edit3, edit4, edit5;
-    private Button btnadd;
-    String idc;
+    private String idc;
 
 
     @Override
@@ -27,7 +26,7 @@ public class PacientesActivity extends AppCompatActivity {
         edit3 = (EditText) findViewById(R.id.editText5);
         edit4 = (EditText) findViewById(R.id.editText6);
         edit5 = (EditText) findViewById(R.id.editText11);
-        btnadd = (Button) findViewById(R.id.button4);
+        Button btnadd = (Button) findViewById(R.id.button4);
 
         Bundle bundle = getIntent().getExtras();
         idc = bundle.getString("_id_c");
@@ -38,14 +37,14 @@ public class PacientesActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String _id_c= idc.toString();
+                String _id_c= idc;
                 String nombrepaciente = edit1.getText().toString();
                 String animal = edit2.getText().toString();
                 String raza = edit3.getText().toString();
                 String sexo = edit4.getText().toString();
                 String historial = edit5.getText().toString();
 
-                Conexion cn = new Conexion(getApplicationContext(),"BDClientes.db",null,1);
+                Conexion cn = new Conexion(getApplicationContext(),"BDClientes.db",null);
                 SQLiteDatabase db = cn.getWritableDatabase();
                 cn.InsertarPaciente(db, nombrepaciente, animal, raza, sexo, historial, _id_c);
 

@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.database.sqlite.SQLiteDatabase.*;
 import android.widget.TextView;
 
 import com.example.ricar.gestionate2.Beans.BeansFacturasIP;
@@ -17,21 +16,26 @@ import java.util.ArrayList;
 
 public class Facturacion extends AppCompatActivity {
 
-    private ListView Lifp,Lifip;
-    TextView pagadas, impagadas;
-    ArrayList<BeansFacturasP> listafp = new ArrayList<BeansFacturasP>();
-    ArrayList<BeansFacturasIP> listafip = new ArrayList<BeansFacturasIP>();
-    BeansFacturasP facturasp;
-    BeansFacturasIP facturasip;
-    String idc, tlf, nom, mail, dir, dn;
+    private TextView pagadas;
+    private TextView impagadas;
+    private final ArrayList<BeansFacturasP> listafp = new ArrayList<>();
+    private final ArrayList<BeansFacturasIP> listafip = new ArrayList<>();
+    private BeansFacturasP facturasp;
+    private BeansFacturasIP facturasip;
+    private String idc;
+    private String tlf;
+    private String nom;
+    private String mail;
+    private String dir;
+    private String dn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_facturacion);
 
-        Lifp = (ListView) findViewById(R.id.listpagadas);
-        Lifip = (ListView) findViewById(R.id.listimpagadas);
+        ListView lifp = (ListView) findViewById(R.id.listpagadas);
+        ListView lifip = (ListView) findViewById(R.id.listimpagadas);
         Bundle bundle = getIntent().getExtras();
         idc = bundle.getString("_id_c");
         tlf = bundle.getString("telefono");
@@ -43,7 +47,7 @@ public class Facturacion extends AppCompatActivity {
 
 
         //mis datos de mi consulta tabla de facturas
-        Conexion cn = new Conexion(getApplicationContext(), "BDClientes.db", null, 1);
+        Conexion cn = new Conexion(getApplicationContext(), "BDClientes.db", null);
         final SQLiteDatabase db = cn.getWritableDatabase();
 
         Cursor f = db.rawQuery("SELECT * FROM facturasp WHERE _id_c=" + idc, null);
@@ -53,8 +57,8 @@ public class Facturacion extends AppCompatActivity {
                 listafp.add(facturasp);
             } while (f.moveToNext());
         }
-        ArrayAdapter<BeansFacturasP> adapfp = new ArrayAdapter<BeansFacturasP>(getApplicationContext(), android.R.layout.simple_list_item_1, listafp);
-        Lifp.setAdapter(adapfp);
+        ArrayAdapter<BeansFacturasP> adapfp = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, listafp);
+        lifp.setAdapter(adapfp);
 
         Cursor fi = db.rawQuery("SELECT * FROM facturasip WHERE _id_c=" + idc, null);
         if (fi.moveToFirst()) {
@@ -63,8 +67,8 @@ public class Facturacion extends AppCompatActivity {
                 listafip.add(facturasip);
             } while (fi.moveToNext());
         }
-        final ArrayAdapter<BeansFacturasIP> adapfip = new ArrayAdapter<BeansFacturasIP>(getApplicationContext(), android.R.layout.simple_list_item_1, listafip);
-        Lifip.setAdapter(adapfip);
+        final ArrayAdapter<BeansFacturasIP> adapfip = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, listafip);
+        lifip.setAdapter(adapfip);
 
         pagadas = (TextView) findViewById(R.id.textViewsumafp);
         impagadas = (TextView) findViewById(R.id.textViewsumafip);

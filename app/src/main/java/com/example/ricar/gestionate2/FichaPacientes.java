@@ -6,8 +6,17 @@ import android.widget.TextView;
 
 public class FichaPacientes extends AppCompatActivity {
 
-    String noma,ani,raz,sex,histo,idp;
-    TextView tvnoma,tvani,tvraz,tvsex,tvhisto;
+    private String noma;
+    private String ani;
+    private String raz;
+    private String sex;
+    private String histo;
+    private String idp;
+    private TextView tvnoma;
+    private TextView tvani;
+    private TextView tvraz;
+    private TextView tvsex;
+    private TextView tvhisto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

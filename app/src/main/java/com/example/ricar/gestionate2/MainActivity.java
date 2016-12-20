@@ -20,9 +20,9 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements SearchView.OnQueryTextListener{
 
-    ListView Li;
-    ArrayList<BeansClientes> lista = new ArrayList<BeansClientes>();
-    BeansClientes clientes;
+    private ListView Li;
+    private final ArrayList<BeansClientes> lista = new ArrayList<>();
+    private BeansClientes clientes;
     private SearchView mSearchView;
 
     @Override
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         mSearchView = (SearchView) findViewById(R.id.search_view);
         Li = (ListView) findViewById(R.id.listView1);
-        Li.setAdapter(new ArrayAdapter<BeansClientes>(this, android.R.layout.simple_list_item_1, lista));
+        Li.setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, lista));
         Li.setTextFilterEnabled(true);
         setupSearchView();
 
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         });
         //termino el fab
 
-        Conexion cn = new Conexion(getApplicationContext(), "BDClientes.db", null, 1);
+        Conexion cn = new Conexion(getApplicationContext(), "BDClientes.db", null);
         SQLiteDatabase db = cn.getWritableDatabase();
 
         Cursor c = db.rawQuery("SELECT * FROM clientes", null);
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             } while (c.moveToNext());
         }
 
-        final ArrayAdapter<BeansClientes> adap = new ArrayAdapter<BeansClientes>(getApplicationContext(), android.R.layout.simple_list_item_1, lista);
+        final ArrayAdapter<BeansClientes> adap = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, lista);
         Li.setAdapter(adap);
 
         //pulsacion en el item del Listview y voy a la ficha.
@@ -105,7 +105,7 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
         if (TextUtils.isEmpty(newText)) {
             Li.clearTextFilter();
         } else {
-            Li.setFilterText(newText.toString());
+            Li.setFilterText(newText);
         }
         return true;
     }

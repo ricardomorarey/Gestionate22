@@ -11,14 +11,14 @@ import android.os.Build;
  */
 public class Conexion extends SQLiteOpenHelper {
 
-    String sql = "CREATE TABLE clientes (_id_c INTEGER PRIMARY KEY AUTOINCREMENT, telefono INTEGER, nombre TEXT , email TEXT, direccion TEXT, dni INTEGER)";
-    String sqlp = "CREATE TABLE pacientes (_id_p INTEGER PRIMARY KEY AUTOINCREMENT, nombrepaciente TEXT, animal TEXT , raza TEXT, sexo TEXT, historial TEXT,_id_c INTEGER, FOREIGN KEY(_id_c) REFERENCES clientes(_id_c) ON DELETE CASCADE )";
-    String sqlfp = "CREATE TABLE facturasp (_id_fp INTEGER PRIMARY KEY AUTOINCREMENT, fechap TEXT, importep REAL,_id_c INTEGER, FOREIGN KEY(_id_c) REFERENCES clientes(_id_c)ON DELETE CASCADE )";
-    String sqlfip = "CREATE TABLE facturasip (_id_fip INTEGER PRIMARY KEY AUTOINCREMENT, fechaip TEXT, importeip REAL,_id_c INTEGER, FOREIGN KEY(_id_c) REFERENCES clientes(_id_c)ON DELETE CASCADE)";
+    private final String sql = "CREATE TABLE clientes (_id_c INTEGER PRIMARY KEY AUTOINCREMENT, telefono INTEGER, nombre TEXT , email TEXT, direccion TEXT, dni INTEGER)";
+    private final String sqlp = "CREATE TABLE pacientes (_id_p INTEGER PRIMARY KEY AUTOINCREMENT, nombrepaciente TEXT, animal TEXT , raza TEXT, sexo TEXT, historial TEXT,_id_c INTEGER, FOREIGN KEY(_id_c) REFERENCES clientes(_id_c) ON DELETE CASCADE )";
+    private final String sqlfp = "CREATE TABLE facturasp (_id_fp INTEGER PRIMARY KEY AUTOINCREMENT, fechap TEXT, importep REAL,_id_c INTEGER, FOREIGN KEY(_id_c) REFERENCES clientes(_id_c)ON DELETE CASCADE )";
+    private final String sqlfip = "CREATE TABLE facturasip (_id_fip INTEGER PRIMARY KEY AUTOINCREMENT, fechaip TEXT, importeip REAL,_id_c INTEGER, FOREIGN KEY(_id_c) REFERENCES clientes(_id_c)ON DELETE CASCADE)";
 
 
-    public Conexion(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public Conexion(Context context, String name, SQLiteDatabase.CursorFactory factory) {
+        super(context, "BDClientes.db", null, 1);
     }
 
     @Override

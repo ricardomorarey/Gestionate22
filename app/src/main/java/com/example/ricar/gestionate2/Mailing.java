@@ -10,8 +10,8 @@ import android.widget.TextView;
 
 public class Mailing extends AppCompatActivity {
 
-    String mail;
-    TextView etEmail;
+    private String mail;
+    private TextView etEmail;
 
 
     @Override

@@ -13,8 +13,7 @@ import com.example.ricar.gestionate2.mysql.Conexion;
 public class FacturasActivity extends AppCompatActivity {
 
     private EditText et1, et2, et3, et4;
-    private Button btnadp, btnadip;
-    String idc;
+    private String idc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +24,8 @@ public class FacturasActivity extends AppCompatActivity {
         et2 = (EditText)findViewById(R.id.editText8);
         et3 = (EditText)findViewById(R.id.editText12);
         et4 = (EditText)findViewById(R.id.editText13);
-        btnadp = (Button)findViewById(R.id.buttonañadir);
-        btnadip = (Button)findViewById(R.id.buttonañaimp);
+        Button btnadp = (Button) findViewById(R.id.buttonañadir);
+        Button btnadip = (Button) findViewById(R.id.buttonañaimp);
 
         Bundle bundle = getIntent().getExtras();
         idc = bundle.getString("_id_c");
@@ -38,11 +37,11 @@ public class FacturasActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String _id_c = idc.toString();
+                String _id_c = idc;
                 String fep = et1.getText().toString();
                 String imp = et2.getText().toString();
 
-                Conexion cn = new Conexion(getApplicationContext(),"BDClientes.db",null,1);
+                Conexion cn = new Conexion(getApplicationContext(),"BDClientes.db",null);
                 SQLiteDatabase db = cn.getWritableDatabase();
                 cn.InsertarFacturasp(db, fep, imp, _id_c);
 
@@ -57,11 +56,11 @@ public class FacturasActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String _id_c = idc.toString();
+                String _id_c = idc;
                 String feip = et3.getText().toString();
                 String imip = et4.getText().toString();
 
-                Conexion cn = new Conexion(getApplicationContext(),"BDClientes.db",null,1);
+                Conexion cn = new Conexion(getApplicationContext(),"BDClientes.db",null);
                 SQLiteDatabase db = cn.getWritableDatabase();
                 cn.InsertarFacturasip(db, feip, imip, _id_c);
 

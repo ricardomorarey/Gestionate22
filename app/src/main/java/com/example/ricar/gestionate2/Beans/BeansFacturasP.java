@@ -1,9 +1,5 @@
 package com.example.ricar.gestionate2.Beans;
 
-import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-
 /**
  * Created by ricar on 07/09/2016.
  */
