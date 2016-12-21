@@ -21,7 +21,6 @@
         <activity android:name=".FacturasActivity" />
         <activity android:name=".FichaActivity" />
         <activity android:name=".FichaPacientes" />
-        <activity android:name=".Mailing" />
         <activity android:name=".Facturacion" />
     </application>
 
