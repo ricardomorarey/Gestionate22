@@ -9,7 +9,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.ricar.gestionate2"
+        applicationId "com.gestionate.ricar.gestionate2"
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 1

@@ -1,4 +1,4 @@
-package com.example.ricar.gestionate2.Beans;
+package com.gestionate.ricar.gestionate2.Beans;
 
 /**
  * Created by ricar on 05/09/2016.

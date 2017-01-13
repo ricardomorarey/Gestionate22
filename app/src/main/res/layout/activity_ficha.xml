@@ -70,7 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Lista clientes:"
+        android:text="Lista pacientes:"
         android:id="@+id/textView21"
         android:layout_below="@+id/textView17"
         android:layout_centerHorizontal="true" />

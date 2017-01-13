@@ -1,4 +1,4 @@
-package com.example.ricar.gestionate2;
+package com.gestionate.ricar.gestionate2;
 
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,9 +8,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.ricar.gestionate2.Beans.BeansFacturasIP;
-import com.example.ricar.gestionate2.Beans.BeansFacturasP;
-import com.example.ricar.gestionate2.mysql.Conexion;
+import com.gestionate.ricar.gestionate2.Beans.BeansFacturasIP;
+import com.gestionate.ricar.gestionate2.Beans.BeansFacturasP;
+import com.gestionate.ricar.gestionate2.mysql.Conexion;
 
 import java.util.ArrayList;
 

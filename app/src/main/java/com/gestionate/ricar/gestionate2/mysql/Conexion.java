@@ -1,4 +1,4 @@
-package com.example.ricar.gestionate2.mysql;
+package com.gestionate.ricar.gestionate2.mysql;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

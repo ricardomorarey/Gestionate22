@@ -1,4 +1,4 @@
-package com.example.ricar.gestionate2;
+package com.gestionate.ricar.gestionate2;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -13,8 +13,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.SearchView;
-import com.example.ricar.gestionate2.Beans.BeansClientes;
-import com.example.ricar.gestionate2.mysql.Conexion;
+import com.gestionate.ricar.gestionate2.Beans.BeansClientes;
+import com.gestionate.ricar.gestionate2.mysql.Conexion;
 
 import java.util.ArrayList;
 
@@ -28,6 +28,10 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //forzar el icono en la action bar
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setIcon(R.mipmap.ic_launcher);
 
 
         //searchview

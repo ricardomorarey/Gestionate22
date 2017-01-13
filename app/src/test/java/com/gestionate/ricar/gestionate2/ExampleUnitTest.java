@@ -1,4 +1,4 @@
-package com.example.ricar.gestionate2;
+package com.gestionate.ricar.gestionate2;
 
 import org.junit.Test;
 

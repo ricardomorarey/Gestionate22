@@ -1,4 +1,4 @@
-package com.example.ricar.gestionate2;
+package com.gestionate.ricar.gestionate2;
 
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.ricar.gestionate2.mysql.Conexion;
+import com.gestionate.ricar.gestionate2.mysql.Conexion;
 
 public class PacientesActivity extends AppCompatActivity {
 

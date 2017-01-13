@@ -1,4 +1,4 @@
-package com.example.ricar.gestionate2;
+package com.gestionate.ricar.gestionate2;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -14,13 +14,13 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.ricar.gestionate2.Beans.BeansPacientes;
-import com.example.ricar.gestionate2.mysql.Conexion;
+import com.gestionate.ricar.gestionate2.Beans.BeansPacientes;
+import com.gestionate.ricar.gestionate2.mysql.Conexion;
 
 import java.util.ArrayList;
 
-import static com.example.ricar.gestionate2.R.id.sendmail;
-import static com.example.ricar.gestionate2.R.id.sendphone;
+import static com.gestionate.ricar.gestionate2.R.id.sendmail;
+import static com.gestionate.ricar.gestionate2.R.id.sendphone;
 
 public class FichaActivity extends AppCompatActivity {
 
@@ -102,7 +102,7 @@ public class FichaActivity extends AppCompatActivity {
                 listap.add(pacientes);
             } while (c.moveToNext());
         }
-        ArrayAdapter<BeansPacientes> adap = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, listap);
+        final ArrayAdapter<BeansPacientes> adap = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, listap);
         Lip.setAdapter(adap);
 
         //pulsacion en el boton de mandar email

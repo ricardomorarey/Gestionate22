@@ -1,4 +1,4 @@
-package com.example.ricar.gestionate2;
+package com.gestionate.ricar.gestionate2;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
