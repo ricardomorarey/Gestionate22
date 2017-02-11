@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics\9.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="4ef8ab5fee042023018249474bc93bd4b2b9c17e">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-9.0.0_1778b140144794a0738e35edda32f9cbccdb403b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\9.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="cc178928721f3222b3b06bdfbd9497378ccb9792">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-basement-9.0.0_f39909a9f0c066705ea10598d56e6951108d188f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8b801632ce77645d595c654d32ed4d25661703f2">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_d53879f48b2be577d3b629dd5bc8aa4d2fa756ee\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_97d5521007bccfa5ba000c50a539c8e84f884061\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.1_2dc563db98b2fb7a58b8a109d0e2559d897e72da\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.1_d63c891401a5b7d4ce28351f9f0edaeeff03e562\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_81e723ae852f0d5e6062a213508e5b1fa1c85f3e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="74397b0c5281722619152c7e30ea322b29022a84">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_e3c9dfadc49ee114ee47fd7cc5d2c42c4533bedb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\9.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="6f65c144283b31b4b9a70e6e7aa4c4a1c897d4b8">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-9.0.0_23140084c449a6bdd4d36b6ae824ae2de0b0a282\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.1\support-annotations-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.1_4af5f554695e09eeec0cfe2ec29258161cff10b7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.1_af9bf31f8ae37554a1a1c84449fef4581181e8f9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.1_feed4cb1c2cab9212b98982e69f6d9ae7e0314d8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7521486d9bfd2cd9e756e0cf75ed7d97f2ce2d3b">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.1_c5b1286b1f5f5e51eca79978bac9ddb661b89c31\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.google.firebase\firebase-common\9.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="42df48c7305b08b14fa0e84561091b0c24d70d26">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-common-9.0.0_3cd658e4c1338a7ca0e9605627decf6a6613649c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.1_620031a6ac09a0cb82c01c2b0f544b2b7785e46a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_6dbba2754671e63c623e9cb762cec1eb93f7cff1\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\design\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e03f47f3d1017a093bb3239d4ec47c3447f40744">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.1_30bce05fe45a8bb2587970bbe2b8600a81885099\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.1_817d06b1a67c985e521df07e75da3a2c2a97e067\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.1_b0661577c004a574af2961a018f38fcb505485e9\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_2607bcfaab7a7aee384a5def3ad7d354d92752bf\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-tasks\9.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="1941832901fc4e7a93300b53762e9f65d7650b99">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-tasks-9.0.0_6d57315d78e1dfca9da97864ca3761568ec9ad54\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.google.firebase\firebase-iid\9.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="ea4b54dcbfe5ac05efb0a314105f07258118d3a7">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-iid-9.0.0_8867a07df176dcc9d671199704b2c66a54cfb7e0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="78ea232052df889856dcb7b7b542707c89bb3bfb">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-multidex-1.0.1_f2a5451005c0960f85b2c940c3a7106dd8593d26\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.google.firebase\firebase-analytics-impl\9.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0dc8ab07eeceda5e99b305c8069765056b6e5c9d">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.firebase-firebase-analytics-impl-9.0.0_43ca0e34627aca2a4b99f85df940ec4cf82085a2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.1_b043fac9cbe22b7948ddfda33cd0c7a87c7b0fec\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.1\jars\libs\internal_impl-24.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.1_bc4179369263b900c3265dd192b8711e72dbb714\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="C:\Users\ricar\StudioProjects\Gestionate22\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.1_d110d059ad45bd384b8ddb409302be791135b540\classes.dex" />
+    </item>
+
+</items>
